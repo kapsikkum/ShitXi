@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<title>SHITPIT</title>
+<link rel="shortcut icon" href="/img/favicon.ico">
+<script src="js/jquery.min.js"></script>
+<script src="js/pastebin.min.v3.js"></script>
+<link href="css/pastebin.min.v9.css" rel="stylesheet" type="text/css">
+
+<style>
+	body {
+		-webkit-text-size-adjust: none;
+	}
+</style>
+<meta name="description" content="Hot sauce anal sandwich">
+<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=yes">
+<script type="text/javascript">
+	if (top != self)
+		top.location.href = location.href;
+</script>
+
+</head>
+
+<body>
+	<div id="main_frame">
+		<div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-anchor-right jq-dropdown-scroll">
+			<ul class="jq-dropdown-menu">
+				<li class="lih_640">
+					<form class="search_form_li" name="search_form_li" method="get" action="/search"
+						id="cse-search-box-li">
+						<input class="search_input_li" type="text" name="q" size="5" value="" placeholder="search...">
+					</form>
+			</ul>
+		</div>
+		<div id="header">
+			<div id="header_wrap">
+				<div id="header_top">
+					<div id="header_logo" onclick="location.href='/'">ShitPit</div>
+					<div id="header_links">
+					</div>
+					<div id="header_search">
+						<!--
+						<form class="search_form" name="search_form" method="get" action="/search" id="cse-search-box">
+							<input class="search_input" type="text" name="q" size="5" value=""
+								placeholder="Search..." />
+						</form>
+						-->
+					</div>
+					<div id="header_new_paste" class="new_paste_button" onclick="location.href='/'">paste</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="super_frame">
+			<div id="monster_frame">
+				<div id="content_frame">
+					<div id="content_right">
+						<div class="content_right_menu">
+							<div class="content_right_title"><a href="/archive">Public Pastes</a>
+							</div>
+							<div id="menu_2">
+								<ul class="right_menu">
+									{% for paste in pastes %}
+										<li><a href="/{{ paste.code }}">{{ paste.title }}</a><span>{{ paste.human_time }}</span></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div id="abrpm2"></div>
+
+						<div style="padding: 0; width:160px;margin: 10px 0;clear:left;">
+							<div id="Unit2">
+								<script>
+									googletag.cmd.push(function () {
+										googletag.display("Unit2");
+									});
+								</script>
+							</div>
+						</div>
+
+					</div>
+					<div id="content_left">
+						<div id="ie_msg"></div>
+
+
+						<div class="content_title no_border">
+							<span class="span_right" style="margin-top:4px;">
+								<button onclick="highlight(document.getElementById('paste_code')); return false;"
+									title="Highlight selected text" class="i_highlight" type="button"></button>
+							</span>
+							New Paste <span><span id="draft_message"></span> <span id="draft_clear">delete
+									draft</span></span>
+						</div>
+						<form class="paste_form" id="myform" enctype="multipart/form-data" name="myform" method="post"
+							action="/post"
+							onsubmit="localStorage.clear();document.getElementById('submit').disabled=true;document.getElementById('submit').value='Please wait...';">
+
+							<div class="textarea_border">
+								<textarea name="paste_code" class="paste_textarea" rows="10" id="paste_code"
+									onkeydown="return catchTab(this,event)"
+									style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; height: 228px;"></textarea>
+							</div>
+							<script type="text/javascript">
+								autosize(document.querySelectorAll('textarea'));
+								$(document).ready(function () {
+									$("#paste_code").focus();
+								});
+							</script>
+							<div class="content_title">Optional Paste Settings</div>
+							<div class="form_frame_left" style="width:460px;min-width:460px">
+								<div class="form_frame">
+									<div class="form_left">
+										Paste Name / Title:
+									</div>
+									<div class="form_right">
+										<input type="text" name="paste_name" size="20" maxlength="60" value=""
+											class="post_input">
+									</div>
+								</div>
+								<div class="form_frame">
+									<div class="form_left">
+										&nbsp;
+									</div>
+									<div class="form_right">
+										<input name="submit" type="submit" value="Create New Paste" id="submit"
+											accesskey="s" class="button1 btnbig">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<span class="h_800">
+			By using <s>Pastebin.com</s> ShitPit you agree to <s>our cookies policy to enhance your experience.</s> absolutely nothing.
+			<br>
+			<s>Site design & logo © 2020 Pastebin;</s> user contributions (pastes) licensed under <a
+				href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="nofollow">cc by-sa 3.0</a> <s>Dedicated
+				Server Hosting by Steadfast</s>
+		</span>
+	</div>
+	<script type="text/javascript">
+		function isIE() {
+			var e = navigator.userAgent.toLowerCase();
+			return -1 != e.indexOf("msie") ? parseInt(e.split("msie")[1]) : !1
+		}
+		if (isIE() && isIE() < 10) {
+			var div = document.getElementById("ie_msg");
+			div.innerHTML = div.innerHTML +
+				'<div id="old_browser">Your browser is outdated and insecure! ShitPit does not offer support for your browser. <a href="http://outdatedbrowser.com/" target="_blank" rel="nofollow">Click here to update your browser</a>!</div>'
+		}
+	</script>
+
+
+</body>
+
+</html>

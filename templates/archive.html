@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pastes Archive - SHITPIT</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" />
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/pastebin.min.v3.js"></script>
+	<link href="/css/pastebin.min.v9.css" rel="stylesheet" type="text/css" />
+	<style>
+		body {
+			-webkit-text-size-adjust: none;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=yes">
+	<script type="text/javascript">
+		if (top != self)
+			top.location.href = location.href;
+	</script>
+</head>
+
+<body>
+	<div id="main_frame">
+		<div id="header">
+			<div id="header_wrap">
+				<div id="header_top">
+					<div id="header_logo" onclick="location.href='/'">SHITPIT</div>
+					<div id="header_search">
+						<!--
+						<form class="search_form" name="search_form" method="get" action="/search" id="cse-search-box">
+							<input class="search_input" type="text" name="q" size="5" value=""
+								placeholder="Search..." />
+						</form>
+						-->
+					</div>
+					<div id="header_new_paste" class="new_paste_button" onclick="location.href='/'">paste</div>
+				</div>
+			</div>
+		</div>
+		<div id="super_frame">
+			<div id="monster_frame">
+				<div id="content_frame">
+					<div id="content_right">
+						<div class="content_right_menu">
+						</div>
+						<div id="abrpm2"></div>
+
+					</div>
+					<div id="content_left">
+						<div id="ie_msg"></div>
+
+
+						<div class="content_title">Pastes Archive</div>
+						<div class="content_text" style="padding:10px 0 0 0">
+							<div id="notice" style="margin:0;">This page contains the most recently created 'public'
+								pastes. </div>
+						</div>
+						<div style="padding: 0 0 10px 0">
+							<table class="maintable">
+								<tr>
+									<th scope="col">Name / Title</th>
+									<th scope="col" class="h_800 td_right">Posted</th>
+								</tr>
+								{% for paste in pastes %}
+									<tr>
+										<td><img src="/img/t.gif" class="i_p0" alt="" /><a href="/{{ paste.code }}">{{ paste.title }}</a></td><td class="td_smaller h_800 td_right">{{ paste.human_time }}</td></td>
+									</tr>
+								{% endfor %}
+							</table>
+						</div>
+						<script type="text/javascript">
+							$(document).ready(function () {
+								$(".close1").click(function () {
+									return $("#float-box-1").hide(), createCookie("l2c_1", !0, 90), !1
+								});
+								$(".cookie_button").click(function () {
+									return $("#float-box-1").hide(), createCookie("l2c_1", !0, 90), !1
+								});
+								$(".close2").click(function () {
+									return $("#float-box-2").hide(), createCookie("l2c_2", !0, 14), !1
+								});
+								$(".close3").click(function () {
+									return $("#float-box-3").hide(), createCookie("l2c_2", !0, 14), !1
+								});
+								$(".close4").click(function () {
+									return $("#float-box-4").hide(), createCookie("l2c_4", !0, 7), !1
+								});
+							});
+						</script>
+						<div id="float-box-frame"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<span class="h_800">
+			By using <s>Pastebin.com</s> ShitPit you agree to <s>our cookies policy to enhance your experience.</s>
+			absolutely nothing.
+			<br>
+			<s>Site design & logo © 2020 Pastebin;</s> user contributions (pastes) licensed under <a
+				href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="nofollow">cc by-sa 3.0</a>
+			<s>Dedicated
+				Server Hosting by Steadfast</s>
+		</span>
+	</div>
+	<script type="text/javascript">
+		function isIE() {
+			var e = navigator.userAgent.toLowerCase();
+			return -1 != e.indexOf("msie") ? parseInt(e.split("msie")[1]) : !1
+		}
+		if (isIE() && isIE() < 10) {
+			var div = document.getElementById("ie_msg");
+			div.innerHTML = div.innerHTML +
+				'<div id="old_browser">Your browser is outdated and insecure! ShitPit does not offer support for your browser. <a href="http://outdatedbrowser.com/" target="_blank" rel="nofollow">Click here to update your browser</a>!</div>'
+		}
+	</script>
+	<div class="pub_300x250"></div><a href="#0" class="cd-top">Top</a>
+
+
+
+</body>
+
+</html>
