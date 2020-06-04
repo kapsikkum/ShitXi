@@ -499,7 +499,7 @@ textarea.paste_textarea {
 #notice,
 #success {
 	background: url(/img/info.png) no-repeat 12px 12px;
-	border: 1px solid rgb(0, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
 	border-radius: 3px;
 	display: block;
 	line-height: 20px;
@@ -517,7 +517,7 @@ textarea.paste_textarea {
 }
 
 #notice {
-	background: rgb(44, 44, 44) url(/img/info.png) no-repeat 10px 10px;
+	background: rgb(0, 0, 0) url(/img/info.png) no-repeat 10px 10px;
 	background-size: 20px 20px;
 	border-left-width: 8px;
 	border-radius: 3px
@@ -2246,7 +2246,9 @@ body .ui-tooltip {
 
 .cd-top.cd-is-visible {
 	opacity: 1;
-	visibility: visible
+	visibility: visible;
+	background-color: black;
+	outline: red solid 1px;
 }
 
 .cd-top.cd-fade-out {
