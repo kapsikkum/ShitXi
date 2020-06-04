@@ -1,6 +1,6 @@
 body {
-	background-color: #292929;
-	color: #ffffff;
+	background-color: #000000;
+	color: red;
 	font-family: "segoe ui", "trebuchet MS", "Lucida Sans Unicode", "Lucida Sans", Sans-Serif;
 	font-size: 16px;
 	line-height: 24px;
@@ -69,7 +69,7 @@ span.msg_numb {
 }
 
 input[type=checkbox]+label span {
-	background-color: #292929;
+	background-color: #000000;
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	cursor: pointer;
@@ -91,31 +91,6 @@ input[type=checkbox]:checked+label span {
 	background-size: 12px 12px
 }
 
-
-.pro_btn,
-.pro_btn_inv {
-	background: url(/img/pro_btn.png) no-repeat;
-	background-size: 28px 14px;
-	height: 14px;
-	vertical-align: top;
-	width: 28px;
-	margin: 6px 0 0
-}
-
-.pro_btn2 {
-	background: url(/img/pro_btn.png) no-repeat;
-	background-size: 28px 14px;
-	height: 14px;
-	vertical-align: top;
-	width: 28px;
-	margin: 5px 0 0
-}
-
-.pro_btn_inv:hover {
-	background: url(/img/pro_btn.png) no-repeat;
-	background-size: 28px 14px
-}
-
 .content_sub_title {
 	border-bottom: 1px solid #ddd;
 	font-size: .9em;
@@ -124,16 +99,19 @@ input[type=checkbox]:checked+label span {
 }
 
 #main_frame {
-	background-color: #1d1d1d;
+	background-color: #000000;
 	border-bottom: 1px solid #000000;
 	width: 100%
 }
 
 #header {
-	background: #8a0606;
-	background-image: linear-gradient(#590202, #440101);
+	background: #8a060600;
+	background-image: linear-gradient(#59020270, #44010111);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .52);
-	color: #fff;
+	color: linear-gradient(#ff0101, rgba(0, 0, 0, 0.486));
+	outline: thin;
+	outline-color: #ff0000;
+	outline-style: solid;
 	font-size: .8em;
 	position: fixed;
 	top: 0;
@@ -141,18 +119,15 @@ input[type=checkbox]:checked+label span {
 	z-index: 5000
 }
 
-#old_browser {
-	display: none
-}
 
 #header_wrap {
-	width: 1200px;
+	/* width: 1200px; */
 	margin: 0 auto
 }
 
 #footer {
 	background: #292929;
-	color: #ffffff;
+	color: linear-gradient(#59020270, #44010111);
 	font-size: .8em;
 	font-weight: 400;
 	min-width: 1200px;
@@ -160,18 +135,12 @@ input[type=checkbox]:checked+label span {
 	margin: 5px auto
 }
 
-#super_frame {
-	min-width: 1100px;
-	width: 1200px;
-	margin: 0 auto
-}
-
 #header_top {
 	clear: both;
 	height: 40px;
 	line-height: 40px;
 	padding: 5px;
-	background: url(/img/header_bg.png) repeat-y right 0
+	width: 100%;
 }
 
 #header_logo {
@@ -187,13 +156,9 @@ input[type=checkbox]:checked+label span {
 	padding: 0 0 0 43px
 }
 
-#header_username {
-	max-width: 160px;
-	overflow: hidden
-}
 
 .code_box {
-	background-color: #363636;
+	background-color: #000000;
 	border: 1px solid #000000;
 	border-radius: 3px;
 	font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace, serif;
@@ -348,12 +313,13 @@ div#content_frame {
 	overflow: hidden;
 	margin: 10px 0 0;
 	padding: 10px 0;
-	background-color: #111;
-	border-color: rgb(255, 0, 0);
+	background-color: rgb(0, 0, 0);
+	outline: thin;
+	outline-color: #ff0000;
+	outline-style: solid;
 }
 
 div#content_right {
-	background: url(/img/linebg.png) no-repeat;
 	float: right;
 	width: 160px;
 	padding: 0 10px
@@ -370,7 +336,7 @@ div#content_right {
 }
 
 .content_right_title {
-	color: #ffffff;
+	color: #ff0000;
 	font-size: .85em;
 	font-weight: 600;
 	margin: 0 0 2px
@@ -378,7 +344,7 @@ div#content_right {
 
 .content_title {
 	border-bottom: 2px solid rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
 	font-size: 1em;
 	font-weight: 600;
 	padding: 0 0 5px
@@ -395,7 +361,7 @@ div#content_right {
 }
 
 .paste_box_info {
-	color: #666;
+	color: rgb(175, 7, 7);
 	float: left;
 	font-size: .8em
 }
@@ -505,10 +471,10 @@ div#content_right {
 
 textarea.paste_code,
 textarea.paste_textarea {
-	background-color: rgb(59, 59, 59);
+	background-color: rgb(0, 0, 0);
 	border: 1px solid rgb(255, 0, 0);
 	outline-color: rgb(255, 0, 0);
-	color: white;
+	color: rgb(255, 0, 0);
 	border-radius: 3px;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 	box-sizing: border-box;
@@ -520,7 +486,8 @@ textarea.paste_textarea {
 	line-height: 21px;
 	width: 100%;
 	margin: 0;
-	padding: 8px 12px
+	padding: 8px 12px;
+	outline-width: 0;
 }
 
 .textarea_border {
@@ -562,13 +529,6 @@ textarea.paste_textarea {
 	border: 1px solid #8BC34A;
 	border-left-width: 8px;
 	border-radius: 3px
-}
-
-#steadfast {
-	background: url(/img/steadfast_3.png) no-repeat center 0;
-	cursor: pointer;
-	height: 79px;
-	width: 160px
 }
 
 .content_text {
@@ -696,15 +656,16 @@ li.xtra_2 {
 
 input.post_input,
 select.post_select {
-	background-color: rgb(27, 27, 27);
+	background-color: rgb(0, 0, 0);
 	border: 1px solid rgb(255, 0, 0);
 	border-radius: 3px;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-	color: #ffffff;
+	color: red;
 	font-family: "segoe ui", "trebuchet MS", "Lucida Sans Unicode", "Lucida Sans", Sans-Serif;
 	font-size: 1em;
 	width: 272px;
-	padding: 8px
+	padding: 8px;
+	outline-width: 0;
 }
 
 select.post_select {
@@ -793,13 +754,10 @@ input.file_output {
 .button1,
 .button2,
 input.button1 {
-	background-color: rgb(15, 0, 0);
-	border-bottom: 2px solid rgb(255, 0, 0);
-	border-left: 0;
+	background-color: #000000;
+	border: 2px solid #ff0000;
 	border-radius: 3px;
-	border-right: 0;
-	border-top: 0;
-	color: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
 	cursor: pointer;
 	display: inline-block;
 	font-family: "segoe ui", "trebuchet MS", "Lucida Sans Unicode", "Lucida Sans", Sans-Serif;
@@ -816,13 +774,13 @@ input.button1 {
 }
 
 .buttonsm {
-	background-color: #ddd;
-	border-bottom: 2px solid #ccc;
+	background-color: rgb(15, 15, 15);
+	border-bottom: 2px solid rgb(116, 20, 20);
 	border-left: 0;
 	border-radius: 3px;
 	border-right: 0;
 	border-top: 0;
-	color: #000;
+	color: rgb(255, 0, 0);
 	cursor: pointer;
 	display: inline-block;
 	font-family: "segoe ui", "trebuchet MS", "Lucida Sans Unicode", "Lucida Sans", Sans-Serif;
@@ -849,7 +807,7 @@ input.button1 {
 input.btnbig {
 	font-weight: 600;
 	height: 35px;
-	line-height: 35px;
+	/* line-height: 35px; */
 	padding: 0 25px
 }
 
@@ -923,7 +881,7 @@ td.verygood {
 
 #header a:hover,
 .content_right_title a:hover {
-	color: rgb(255, 0, 0)
+	color: rgb(248, 248, 248)
 }
 
 ul.right_menu {
@@ -1199,7 +1157,7 @@ button.i_add {
 }
 
 #code_frame div {
-	color: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
 	font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace, serif;
 }
 
@@ -1247,7 +1205,7 @@ span#b_facebook {
 
 .paste_box_icon,
 .form_avatar {
-	border: 1px solid #ddd;
+	border: 1px solid rgb(255, 0, 0);
 	border-radius: 3px;
 	float: left;
 	height: 50px;
@@ -1587,7 +1545,7 @@ img.header_icons:hover,
 
 .content_right_title a,
 a.folder_link {
-	color: rgb(255, 255, 255)
+	color: rgb(255, 0, 0)
 }
 
 textarea.abuse_textarea,
@@ -1634,7 +1592,7 @@ form,
 .custom-file-input:active:before,
 input.button1:hover,
 .button1:hover {
-	color: #000;
+	color: rgb(255, 255, 255);
 	opacity: .8
 }
 
@@ -1700,8 +1658,8 @@ input.button1:hover,
 }
 
 ol {
-	color: rgb(255, 255, 255);
-	background: rgb(29, 29, 29);
+	color: rgb(255, 0, 0);
+	background: rgb(0, 0, 0);
 	margin: 0;
 	padding: 0 0 0 55px;
 	word-wrap: break-word
@@ -1709,13 +1667,17 @@ ol {
 
 li.ln-xtra .de1,
 li.ln-xtra .de2 {
-	color: white;
-	background: rgb(59, 59, 59);
+	color: rgb(255, 0, 0);
+	background: rgb(0, 0, 0);
+}
+
+div.de1 {
+	background-color: #000;
 }
 
 .de1:hover,
 .de2:hover {
-	background: rgba(228, 13, 13, 0.26)
+	background: rgba(51, 51, 51, 0.26)
 }
 
 .shop_frm {
@@ -1790,14 +1752,6 @@ li.ln-xtra .de2 {
 	font-weight: 600;
 	font-size: 1em;
 	text-transform: uppercase
-}
-
-.shop_thumb a {
-	color: #fff
-}
-
-.shop_thumb a:hover {
-	color: #ff0
 }
 
 .button12 {
@@ -2930,9 +2884,9 @@ span.mark {
 
 #header a.btn-sign {
 	display: inline-block;
-	border: 1px solid #fff;
+	border: 1px solid rgb(255, 0, 0);
 	border-radius: 3px;
-	color: #fff;
+	color: rgb(255, 0, 0);
 	cursor: pointer;
 	font-size: 1em;
 	font-weight: 400;
@@ -2942,45 +2896,4 @@ span.mark {
 	padding: 3px 0;
 	width: 69px;
 	text-align: center;
-}
-
-#header a.btn-sign.sign-in {
-	color: #fff;
-	background: transparent;
-}
-
-#header a.btn-sign.sign-in:hover {
-	color: #fff;
-	background: rgba(255, 255, 255, 0.2);
-}
-
-#header a.btn-sign.sign-up {
-	color: #023f63;
-	background: #fff;
-}
-
-#header a.btn-sign.sign-up:hover {
-	color: #023f63;
-	background: rgba(255, 255, 255, 0.8);
-}
-
-#notice_hot {
-	background: url(/img/hot.png) no-repeat 12px 9px;
-	background-size: 16px 22px;
-	border: 1px solid #f68e12;
-	border-left-width: 8px;
-	border-radius: 3px;
-	display: block;
-	line-height: 20px;
-	min-height: 20px;
-	margin: 6px 0;
-	padding: 10px 10px 10px 38px;
-}
-
-.notice_pro {
-	background: url(/img/pro_btn_big.png) no-repeat;
-	background-size: 36px 20px;
-	height: 20px;
-	vertical-align: top;
-	width: 36px;
 }

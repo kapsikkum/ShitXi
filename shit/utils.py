@@ -25,10 +25,7 @@ def random_id():
 
 
 def human_time(timestamp, since=True):
-	if since:
-		return humanize.naturaltime(time.time() - timestamp)
-	else:
-		return custom_strftime('%b {S}, %Y', datetime.fromtimestamp(timestamp))
+	return (humanize.naturaltime(time.time() - timestamp) if since else custom_strftime('%b {S}, %Y', datetime.fromtimestamp(timestamp)))
 
 
 def get_string_size(string):

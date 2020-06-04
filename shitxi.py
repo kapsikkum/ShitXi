@@ -10,20 +10,20 @@ from flask import (Flask, Response, flash, jsonify, redirect, render_template,
 
 from shit import database, utils
 
+
 class localFlask(Flask):
     def process_response(self, response):
-        #Every response will be processed here first
         response.headers['server'] = 'SEGA Dreamcast Advanced Server Engine'
         response.headers['Last-Modified'] = 'Never, take off your clothes.'
         response.headers['Date'] = 'Time is relative.'
         response.headers['Expires'] = '...before the milk'
         return(response)
-
 app = localFlask(__name__,
             static_url_path='',
             static_folder='static/',
             template_folder='templates/')
 app.config['SECRET_KEY'] = os.urandom(12)
+
 
 @app.route("/")
 def index():
@@ -46,7 +46,7 @@ def post():
             return redirect("/")
         if paste_title == "":
             paste_title = "Untitled"
-        link = database.write_paste_data(paste_title, paste_content, request.remote_addr)
+        link = database.write_paste_data(paste_title, paste_content)
         return redirect(f"/{link}")
 
 
@@ -97,4 +97,4 @@ def error404(e):
 
 database.init_db()
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=42069)
+    app.run(host="0.0.0.0", port=80)

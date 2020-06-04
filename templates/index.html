@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-
-<title>SHITPIT</title>
-<link rel="shortcut icon" href="/img/favicon.ico">
-<script src="js/jquery.min.js"></script>
-<script src="js/pastebin.min.v3.js"></script>
-<link href="css/pastebin.min.v9.css" rel="stylesheet" type="text/css">
-
-<style>
-	body {
-		-webkit-text-size-adjust: none;
-	}
-</style>
-<meta name="description" content="Hot sauce anal sandwich">
-<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=yes">
-<script type="text/javascript">
-	if (top != self)
-		top.location.href = location.href;
-</script>
+<head>
+	<title>ShitXi</title>
+	<link rel="shortcut icon" href="/img/favicon.ico">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/shitxi.min.js"></script>
+	<link href="css/shitxi.css" rel="stylesheet" type="text/css">
+	<style>
+		body {
+			-webkit-text-size-adjust: none;
+		}
+	</style>
+	<meta name="description" content="Hot sauce anal sandwich">
+	<meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=yes">
+	<script type="text/javascript">
+		if (top != self)
+			top.location.href = location.href;
+	</script>
 
 </head>
 
@@ -34,16 +33,8 @@
 		<div id="header">
 			<div id="header_wrap">
 				<div id="header_top">
-					<div id="header_logo" onclick="location.href='/'">ShitPit</div>
+					<div id="header_logo" onclick="location.href='/'">ShitXi</div>
 					<div id="header_links">
-					</div>
-					<div id="header_search">
-						<!--
-						<form class="search_form" name="search_form" method="get" action="/search" id="cse-search-box">
-							<input class="search_input" type="text" name="q" size="5" value=""
-								placeholder="Search..." />
-						</form>
-						-->
 					</div>
 					<div id="header_new_paste" class="new_paste_button" onclick="location.href='/'">paste</div>
 
@@ -67,26 +58,13 @@
 						</div>
 						<div id="abrpm2"></div>
 
-						<div style="padding: 0; width:160px;margin: 10px 0;clear:left;">
-							<div id="Unit2">
-								<script>
-									googletag.cmd.push(function () {
-										googletag.display("Unit2");
-									});
-								</script>
-							</div>
-						</div>
-
 					</div>
 					<div id="content_left">
-						<div id="ie_msg"></div>
-
-
 						<div class="content_title no_border">
-							<span class="span_right" style="margin-top:4px;">
+							<!-- <span class="span_right" style="margin-top:4px;">
 								<button onclick="highlight(document.getElementById('paste_code')); return false;"
 									title="Highlight selected text" class="i_highlight" type="button"></button>
-							</span>
+							</span> -->
 							New Paste <span><span id="draft_message"></span> <span id="draft_clear">delete
 									draft</span></span>
 						</div>
@@ -133,30 +111,17 @@
 		</div>
 	</div>
 
-	<div id="footer">
+	<!-- <div id="footer">
 		<span class="h_800">
-			By using <s>Pastebin.com</s> ShitPit you agree to <s>our cookies policy to enhance your experience.</s> absolutely nothing.
+			By using <s>Pastebin.com</s> ShitXi you agree to <s>our cookies policy to enhance your experience.</s> absolutely nothing.
 			<br>
 			<s>Site design & logo © 2020 Pastebin;</s> user contributions (pastes) licensed under <a
 				href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="nofollow">cc by-sa 3.0</a> Dedicated
 				Server Hosting by <s>Steadfast</s> my home computer.
 			<br>
-			contact us at: shitpit <b>[at]</b> dnmx <b>[dot]</b> org
+			Contact: ShitXi <b>[at]</b> dnmx <b>[dot]</b> org
 		</span>
-	</div>
-	<script type="text/javascript">
-		function isIE() {
-			var e = navigator.userAgent.toLowerCase();
-			return -1 != e.indexOf("msie") ? parseInt(e.split("msie")[1]) : !1
-		}
-		if (isIE() && isIE() < 10) {
-			var div = document.getElementById("ie_msg");
-			div.innerHTML = div.innerHTML +
-				'<div id="old_browser">Something is wrong with your browser. Go use something decent. <a href="http://outdatedbrowser.com/" target="_blank" rel="nofollow">Click here to update your browser</a>!</div>'
-		}
-	</script>
-
-
+	</div> -->
 </body>
 
 </html>
