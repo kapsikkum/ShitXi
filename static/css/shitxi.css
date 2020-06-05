@@ -822,12 +822,12 @@ table.maintable {
 }
 
 .td_smaller {
-	color: #666;
+	color: rgb(150, 3, 3);
 	font-size: .9em
 }
 
 .maintable td {
-	border-bottom: 1px solid #F2F2F2;
+	border-bottom: 1px solid red;
 	vertical-align: top;
 	padding: 0 6px;
 	line-height: 35px
@@ -846,7 +846,7 @@ td.verygood {
 }
 
 .maintable th {
-	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid red;
 	font-weight: 600;
 	text-transform: uppercase;
 	padding: 4px 6px;
